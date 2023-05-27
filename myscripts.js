@@ -34,7 +34,7 @@ var userInput = prompt("Choose your fighter!");
 
 //create capitilize function
 
-function capaitalize (str) {
+function capitalize (str) {
     const lower = str.toLowerCase()
     return str.charAt(0).toUpperCase() + lower.slice(1)
 }
