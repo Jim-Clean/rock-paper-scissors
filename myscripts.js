@@ -12,3 +12,11 @@ characters are in correct order it will accept selection.
 
 - Expand game to 5 rounds and keep score until there is a winner.
 */
+
+//create array of options for computer to select
+
+var optionArray = [
+    "Rock",
+    "Paper",
+    "Scissors"
+];
