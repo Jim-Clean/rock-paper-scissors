@@ -32,3 +32,13 @@ function getComputerChoice(myArray){
 
 var userInput = prompt("Choose your fighter!");
 
+//create capitilize function
+
+function capaitalize (str) {
+    const lower = str.toLowerCase()
+    return str.charAt(0).toUpperCase() + lower.slice(1)
+}
+
+//Edit userInput to allow all types of text entry
+
+var playerSelection = capitalize(userInput);
