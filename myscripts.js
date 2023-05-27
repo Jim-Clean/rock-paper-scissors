@@ -20,3 +20,12 @@ var optionArray = [
     "Paper",
     "Scissors"
 ];
+
+//select random choice from array by using Math.random with the length of 
+//Array
+
+function getComputerChoice(myArray){
+    return myArray[Math.floor(Math.random() * myArray.length)];
+}
+
+console.log(getComputerChoice(optionArray));
