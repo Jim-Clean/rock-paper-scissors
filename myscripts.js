@@ -17,8 +17,8 @@ characters are in correct order it will accept selection.
 
 var optionArray = [
     "Rock",
-    "Paper",
-    "Scissors"
+    "Scissors",
+    "Paper"
 ];
 
 //select random choice from array by using Math.random with the length of 
@@ -42,3 +42,46 @@ function capitalize (str) {
 //Edit userInput to allow all types of text entry
 
 var playerSelection = capitalize(userInput);
+
+var computerSelection = getComputerChoice(optionArray);
+
+//make game logic for winner/loser.
+
+//Create each array type.
+
+var rock = [
+    "Scissors",
+    "Rock",
+    "Paper"
+]
+
+var paper = [
+    "Rock",
+    "Paper",
+    "Scissors"
+]
+
+var scissors = [
+    "Paper",
+    "Scissors",
+    "Rock"
+]
+
+//function for deciding winner
+
+function arrayLogic (Array) {
+    if (Array.indexOf(playerSelection) > Array.indexOf(computerSelection)) {
+        outcome =  "Winner"
+    } else if (Array.indexOf(playerSelection) < Array.indexOf(computerSelection)) {
+        outcome = "loser"
+    } else {
+        outome = "draw"
+}
+
+
+
+}
+console.log(playerSelection);
+console.log(computerSelection);
+
+console.log(outcome);
