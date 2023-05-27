@@ -69,18 +69,24 @@ var scissors = [
 
 //function for deciding winner
 
-function arrayLogic (Array) {
+function arrayLogic(Array) {
     if (Array.indexOf(playerSelection) > Array.indexOf(computerSelection)) {
         outcome =  "Winner"
     } else if (Array.indexOf(playerSelection) < Array.indexOf(computerSelection)) {
         outcome = "loser"
     } else {
-        outome = "draw"
+        outcome = "draw"
+    }
 }
 
-
-
+if (playerSelection === "Rock") {
+    arrayLogic(rock)
+} else if (playerSelection === "Paper") {
+    arrayLogic(paper)
+} else {
+    arrayLogic(scissors)
 }
+
 console.log(playerSelection);
 console.log(computerSelection);
 
