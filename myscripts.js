@@ -28,4 +28,7 @@ function getComputerChoice(myArray){
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-console.log(getComputerChoice(optionArray));
+//prompt user input of selection and get text entry
+
+var userInput = prompt("Choose your fighter!");
+
