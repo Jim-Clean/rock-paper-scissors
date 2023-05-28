@@ -15,6 +15,7 @@ characters are in correct order it will accept selection.
 
 //create array of options for computer to select
 
+/*
 var optionArray = [
     "Rock",
     "Scissors",
@@ -46,6 +47,8 @@ var playerSelection = capitalize(userInput);
 var computerSelection = getComputerChoice(optionArray);
 
 //make game logic for winner/loser in function
+
+*/
 
 function playRound(playerSelection, computerSelection) {
 
@@ -95,7 +98,53 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+/*
+- (for?) loop function to play 5 rounds
+- keep score of game for these 5 rounds
+- outcome may need to change to scores rather than winner/loser
+- display the ongoing score to the user and then show end result
+*/
 
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+
+    for (let round = 0; round < 5; round++) {
+
+        var optionArray = [
+            "Rock",
+            "Scissors",
+            "Paper"
+        ];
+        
+        //select random choice from array by using Math.random with the length of 
+        //Array
+        
+        function getComputerChoice(myArray){
+            return myArray[Math.floor(Math.random() * myArray.length)];
+        }
+        
+        //prompt user input of selection and get text entry
+        
+        var userInput = prompt("Choose your fighter!");
+        
+        //create capitilize function
+        
+        function capitalize (str) {
+            const lower = str.toLowerCase()
+            return str.charAt(0).toUpperCase() + lower.slice(1)
+        }
+        
+        //Edit userInput to allow all types of text entry
+        
+        var playerSelection = capitalize(userInput);
+        
+        var computerSelection = getComputerChoice(optionArray);
+
+        console.log(playerSelection);
+        console.log(computerSelection);
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
+//console.log(playerSelection);
+//console.log(computerSelection);
+//console.log(game());
