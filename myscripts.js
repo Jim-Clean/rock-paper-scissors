@@ -45,49 +45,57 @@ var playerSelection = capitalize(userInput);
 
 var computerSelection = getComputerChoice(optionArray);
 
-//make game logic for winner/loser.
+//make game logic for winner/loser in function
 
-//Create each array type.
+function playRound(playerSelection, computerSelection) {
 
-var rock = [
-    "Scissors",
-    "Rock",
-    "Paper"
-]
+    //Create each array type.
 
-var paper = [
-    "Rock",
-    "Paper",
-    "Scissors"
-]
+    var rock = [
+        "Scissors",
+        "Rock",
+        "Paper"
+    ]
 
-var scissors = [
-    "Paper",
-    "Scissors",
-    "Rock"
-]
+    var paper = [
+        "Rock",
+        "Paper",
+        "Scissors"
+    ]
 
-//function for deciding winner
+    var scissors = [
+        "Paper",
+        "Scissors",
+        "Rock"
+    ]
 
-function arrayLogic(Array) {
-    if (Array.indexOf(playerSelection) > Array.indexOf(computerSelection)) {
-        outcome =  "Winner"
-    } else if (Array.indexOf(playerSelection) < Array.indexOf(computerSelection)) {
-        outcome = "loser"
-    } else {
-        outcome = "draw"
+    //function for deciding winner
+
+    function arrayLogic(Array) {
+        if (Array.indexOf(playerSelection) > Array.indexOf(computerSelection)) {
+            outcome =  "Winner"
+        } else if (Array.indexOf(playerSelection) < Array.indexOf(computerSelection)) {
+            outcome = "loser"
+        } else {
+            outcome = "draw"
+        }
     }
+
+    //Decide which array to use based of user selection
+
+    if (playerSelection === "Rock") {
+        arrayLogic(rock)
+    } else if (playerSelection === "Paper") {
+        arrayLogic(paper)
+    } else {
+        arrayLogic(scissors)
+    }
+
+    return outcome
+
 }
 
-if (playerSelection === "Rock") {
-    arrayLogic(rock)
-} else if (playerSelection === "Paper") {
-    arrayLogic(paper)
-} else {
-    arrayLogic(scissors)
-}
 
 console.log(playerSelection);
 console.log(computerSelection);
-
-console.log(outcome);
+console.log(playRound(playerSelection, computerSelection));
