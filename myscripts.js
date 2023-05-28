@@ -103,7 +103,6 @@ var score = 0;
 /*
 - (for?) loop function to play 5 rounds
 - keep score of game for these 5 rounds
-- outcome may need to change to scores rather than winner/loser
 - display the ongoing score to the user and then show end result
 */
 
