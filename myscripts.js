@@ -78,9 +78,9 @@ function playRound(playerSelection, computerSelection) {
         if (Array.indexOf(playerSelection) > Array.indexOf(computerSelection)) {
             outcome =  "Winner"
         } else if (Array.indexOf(playerSelection) < Array.indexOf(computerSelection)) {
-            outcome = "loser"
+            outcome = "Loser"
         } else {
-            outcome = "draw"
+            outcome = "Draw"
         }
     }
 
@@ -97,6 +97,8 @@ function playRound(playerSelection, computerSelection) {
     return outcome
 
 }
+
+var score = 0;
 
 /*
 - (for?) loop function to play 5 rounds
@@ -141,10 +143,20 @@ function game() {
 
         console.log(playerSelection);
         console.log(computerSelection);
-        console.log(playRound(playerSelection, computerSelection))
+        console.log(playRound(playerSelection, computerSelection));
+
+        if (outcome === "Winner") {
+            score = score+1
+        } else if (outcome === "Loser") {
+            score = score-1
+        } else {
+            score = score*1
+        }
+        
+        console.log(score);
     }
 }
 
 //console.log(playerSelection);
 //console.log(computerSelection);
-//console.log(game());
+console.log(game());
