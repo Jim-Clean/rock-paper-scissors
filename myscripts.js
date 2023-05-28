@@ -112,9 +112,17 @@ function game() {
         }
 
         console.log(score);
+
+        //decide overall winner and output result
+        if (round === 4 && score > 0) {
+            alert("Player wins!")
+        } else if (round === 4 && score < 0 ) {
+            alert("Computer wins!")
+        } else if (round === 4 && score === 0 ) {
+            alert("Draw game! Refresh to play again")
+        }
     }
 }
-
 //console.log(playerSelection);
 //console.log(computerSelection);
 console.log(game());
