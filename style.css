@@ -5,6 +5,13 @@ ul {
 
 .grid {
     display: flex;
-    justify-content: space-evenly;
-    gap: 32px;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.section-wrapper {
+    max-width: 650px;
+    margin: auto;
+    padding-left: 12px;
+    padding-right: 12px;
 }
