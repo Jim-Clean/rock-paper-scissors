@@ -122,7 +122,8 @@ function game() {
             alert("Draw game! Refresh to play again")
         }
     }
-}
+};
+
 //console.log(playerSelection);
 //console.log(computerSelection);
 console.log(game());
