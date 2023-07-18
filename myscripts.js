@@ -14,6 +14,8 @@ characters are in correct order it will accept selection.
 */
 
 //make game logic for winner/loser in function
+
+/*
 function playRound(playerSelection, computerSelection) {
 
     //Create each array type.
@@ -60,13 +62,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 var score = 0;
-
+*/
 /*
 - loop function to play 5 rounds
 - keep score of game for these 5 rounds
 - display the ongoing score to the user and then show end result
 */
 
+
+/*
 function game() {
 
     for (let round = 0; round < 5; round++) {
@@ -123,13 +127,14 @@ function game() {
         }
     }
 };
-
-document.addEventListener("click", myFunction);
+*/
+const rockBtn = document.getElementById("rockBtn");
+rockBtn.addEventListener('click', myFunction);
 
 function myFunction() {
-  document.getElementById("rock").innerHTML = "Hello World";
-  console.log("rock played");
+    console.log("rock played");
 }
+
 
 //console.log(playerSelection);
 //console.log(computerSelection);
