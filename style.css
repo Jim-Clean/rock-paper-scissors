@@ -32,3 +32,8 @@ ul {
     font-family: monospace;
     font-size: 36px;
 }
+
+button {
+    border: none;
+    background-color: white;
+}
