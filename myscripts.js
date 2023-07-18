@@ -124,6 +124,13 @@ function game() {
     }
 };
 
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("rock").innerHTML = "Hello World";
+  console.log("rock played");
+}
+
 //console.log(playerSelection);
 //console.log(computerSelection);
-console.log(game());
+//console.log(game());
