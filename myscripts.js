@@ -140,17 +140,34 @@ function game() {
 }
 */
 
-
+/*
 const rock = document.getElementById('Rock');
     
 rock.addEventListener('click', () => {
-    console.log("Rock");
     playerSelection = "Rock";
     computerSelection = getComputerChoice(optionArray);
     console.log(playerSelection);
     console.log(computerSelection);
     console.log(playRound(playerSelection, computerSelection));
 });
+*/
+
+
+const buttons = document.querySelectorAll('button');
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    playerSelection = button.id;
+    computerSelection = getComputerChoice(optionArray);
+    console.log(playerSelection);
+    console.log(computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+  });
+});
+
+
 //console.log(playerSelection);
 //console.log(computerSelection);
 //console.log(playRound(playerSelection, computerSelection));
