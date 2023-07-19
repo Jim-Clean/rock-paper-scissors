@@ -14,8 +14,6 @@ characters are in correct order it will accept selection.
 */
 
 //make game logic for winner/loser in function
-
-/*
 function playRound(playerSelection, computerSelection) {
 
     //Create each array type.
@@ -61,26 +59,39 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-var score = 0;
-*/
+var optionArray = [
+    "Rock",
+    "Scissors",
+    "Paper"
+]
+
+var computerSelection = getComputerChoice(optionArray);
+
+//select random choice from array by using Math.random with the length of 
+//Array
+function getComputerChoice(myArray){
+    return myArray[Math.floor(Math.random() * myArray.length)];
+}
+
+let score = 0;
+
 /*
 - loop function to play 5 rounds
 - keep score of game for these 5 rounds
 - display the ongoing score to the user and then show end result
 */
 
-
 /*
 function game() {
 
-    for (let round = 0; round < 5; round++) {
+    for (let round = 0; round > 5; round++) {
 
         //create array of options for computer to select
         var optionArray = [
             "Rock",
             "Scissors",
             "Paper"
-        ];
+        ]
         
         //select random choice from array by using Math.random with the length of 
         //Array
@@ -126,16 +137,20 @@ function game() {
             alert("Draw game! Refresh to play again")
         }
     }
-};
-*/
-const rockBtn = document.getElementById("rockBtn");
-rockBtn.addEventListener('click', myFunction);
-
-function myFunction() {
-    console.log("rock played");
 }
+*/
 
 
+const rock = document.getElementById('Rock');
+    
+rock.addEventListener('click', () => {
+    console.log("Rock");
+    playerSelection = "Rock";
+    computerSelection = getComputerChoice(optionArray);
+    console.log(playerSelection);
+    console.log(computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
 //console.log(playerSelection);
 //console.log(computerSelection);
-//console.log(game());
+//console.log(playRound(playerSelection, computerSelection));
