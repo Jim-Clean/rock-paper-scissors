@@ -35,7 +35,7 @@ ul {
 
 button {
     border: none;
-    background-color: white;
+    background-color: #faf3f2;
 }
 
 .score-wrapper {
@@ -65,4 +65,8 @@ button {
     margin: auto;
     justify-content: center;
     font-family: monospace;
+}
+
+html {
+    background-color: #faf3f2;
 }

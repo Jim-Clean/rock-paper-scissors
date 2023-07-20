@@ -66,7 +66,7 @@ function playRound(playerSelection, computerSelection) {
         } else if (outcome === "Draw") {
             playerScore = playerScore*1
             computerScore = computerScore*1
-            winnerinner.innerHTML = "Round is a draw!";
+            winner.innerHTML = "Round is a draw!";
         }
 
         const playerScoreCount = document.getElementById("playerScore");
