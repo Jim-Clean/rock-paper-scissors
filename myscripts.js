@@ -67,6 +67,8 @@ function playRound(playerSelection, computerSelection) {
 
         console.log(score);
 
+        const winner = document.getElementById("winner");
+
         if (score === 5) {
             winner.innerHTML = "Player wins!";
         } else if (score === -5) {
@@ -76,7 +78,6 @@ function playRound(playerSelection, computerSelection) {
         const scoreCount = document.getElementById("score");
         scoreCount.innerHTML = score;
 
-        const winner = document.getElementById("winner");
     //return outcome
 
 }
