@@ -72,7 +72,7 @@ function playRound(playerSelection, computerSelection) {
         } else if (score === -5) {
             console.log("Computer wins!")
         }
-
+        
         const scoreCount = document.getElementById("score");
         scoreCount.innerHTML = score;
     //return outcome
