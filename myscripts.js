@@ -58,25 +58,29 @@ function playRound(playerSelection, computerSelection) {
 
 
         if (outcome === "Winner") {
-            score = score+1
+            playerScore = playerScore+1
         } else if (outcome === "Loser") {
-            score = score-1
+            computerScore = computerScore+1
         } else {
-            score = score*1
+            playerScore = playerScore*1
+            computerScore = computerScore*1
         }
 
-        console.log(score);
+        //console.log(score);
 
         const winner = document.getElementById("winner");
 
-        if (score === 5) {
+        if (playerScore === 5) {
             winner.innerHTML = "Player wins!";
-        } else if (score === -5) {
+        } else if (computerScore === 5) {
             winner.innerHTML = "Computer wins!";
         }
         
-        const scoreCount = document.getElementById("score");
-        scoreCount.innerHTML = score;
+        const playerScoreCount = document.getElementById("playerScore");
+        playerScoreCount.innerHTML = playerScore;
+
+        const computerScoreCount = document.getElementById("computerScore");
+        computerScoreCount.innerHTML = computerScore;
 
     //return outcome
 
@@ -96,7 +100,8 @@ function getComputerChoice(myArray){
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-let score = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 /*
 - loop function to play 5 rounds
