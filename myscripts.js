@@ -63,26 +63,26 @@ function playRound(playerSelection, computerSelection) {
         } else if (outcome === "Loser") {
             computerScore = computerScore+1
             winner.innerHTML = "Computer wins round!";
-        } else {
+        } else if (outcome === "Draw") {
             playerScore = playerScore*1
             computerScore = computerScore*1
             winnerinner.innerHTML = "Round is a draw!";
         }
 
-        //console.log(score);
-
-        if (playerScore === 5) {
-            winner.innerHTML = "Player wins game!";
-        } else if (computerScore === 5) {
-            winner.innerHTML = "Computer wins game!";
-        }
-        
         const playerScoreCount = document.getElementById("playerScore");
         playerScoreCount.innerHTML = playerScore;
 
         const computerScoreCount = document.getElementById("computerScore");
         computerScoreCount.innerHTML = computerScore;
+        //console.log(score);
 
+        if (playerScore === 5) {
+            winner.innerHTML = "Player wins game!";
+            return playerScore
+        } else if (computerScore === 5) {
+            winner.innerHTML = "Computer wins game!";
+            return computerScore
+        }
     //return outcome
 
 }
@@ -181,7 +181,23 @@ rock.addEventListener('click', () => {
 });
 */
 
+    const buttons = document.querySelectorAll('button');
+    // we use the .forEach method to iterate through each button
+    buttons.forEach((button) => {
 
+  // and for each one we add a 'click' listener
+    button.addEventListener('click', () => {
+        if (playerScore < 5 && computerScore < 5) {
+        playerSelection = button.id;
+        computerSelection = getComputerChoice(optionArray);
+        console.log(playerSelection);
+        console.log(computerSelection);
+        console.log(playRound(playerSelection,computerSelection));
+        }
+    });
+    });
+
+/*
 const buttons = document.querySelectorAll('button');
 // we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
@@ -195,7 +211,7 @@ buttons.forEach((button) => {
     console.log(playRound(playerSelection,computerSelection));
   });
 });
-
+*/
 /*
 const scoreCount = document.getElementById("score");
 scoreCount.innerHTML += score;
