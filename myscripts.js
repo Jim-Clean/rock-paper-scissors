@@ -55,25 +55,26 @@ function playRound(playerSelection, computerSelection) {
         arrayLogic(scissors)
     }
 
-
+        const winner = document.getElementById("winner");
 
         if (outcome === "Winner") {
             playerScore = playerScore+1
+            winner.innerHTML = "Player wins round!";
         } else if (outcome === "Loser") {
             computerScore = computerScore+1
+            winner.innerHTML = "Computer wins round!";
         } else {
             playerScore = playerScore*1
             computerScore = computerScore*1
+            winnerinner.innerHTML = "Round is a draw!";
         }
 
         //console.log(score);
 
-        const winner = document.getElementById("winner");
-
         if (playerScore === 5) {
-            winner.innerHTML = "Player wins!";
+            winner.innerHTML = "Player wins game!";
         } else if (computerScore === 5) {
-            winner.innerHTML = "Computer wins!";
+            winner.innerHTML = "Computer wins game!";
         }
         
         const playerScoreCount = document.getElementById("playerScore");
