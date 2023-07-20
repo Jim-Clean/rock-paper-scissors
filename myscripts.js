@@ -68,13 +68,15 @@ function playRound(playerSelection, computerSelection) {
         console.log(score);
 
         if (score === 5) {
-            console.log("Player wins!")
+            winner.innerHTML = "Player wins!";
         } else if (score === -5) {
-            console.log("Computer wins!")
+            winner.innerHTML = "Computer wins!";
         }
         
         const scoreCount = document.getElementById("score");
         scoreCount.innerHTML = score;
+
+        const winner = document.getElementById("winner");
     //return outcome
 
 }
