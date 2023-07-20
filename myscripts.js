@@ -55,17 +55,35 @@ function playRound(playerSelection, computerSelection) {
         arrayLogic(scissors)
     }
 
-    return outcome
+
+
+        if (outcome === "Winner") {
+            score = score+1
+        } else if (outcome === "Loser") {
+            score = score-1
+        } else {
+            score = score*1
+        }
+
+        console.log(score);
+
+        if (score === 5) {
+            console.log("Player wins!")
+        } else if (score === -5) {
+            console.log("Computer wins!")
+        }
+
+    //return outcome
 
 }
 
-var optionArray = [
+let optionArray = [
     "Rock",
     "Scissors",
     "Paper"
 ]
 
-var computerSelection = getComputerChoice(optionArray);
+let computerSelection = getComputerChoice(optionArray);
 
 //select random choice from array by using Math.random with the length of 
 //Array
@@ -163,11 +181,35 @@ buttons.forEach((button) => {
     computerSelection = getComputerChoice(optionArray);
     console.log(playerSelection);
     console.log(computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
   });
 });
 
 
+/*
+function game() {
+    for (let round = 0; round > 5; round++) {
+
+        if (outcome === "Winner") {
+            score = score+1
+        } else if (outcome === "Loser") {
+            score = score-1
+        } else {
+            score = score*1
+        }
+
+        console.log(score);
+
+        //decide overall winner and output result
+        if (score === 5) {
+            console.log("Player wins!")
+        } else if (score === -5) {
+            console.log("Computer wins!")
+        }
+    }
+}
+*/
+
 //console.log(playerSelection);
 //console.log(computerSelection);
-//console.log(playRound(playerSelection, computerSelection));
+//console.log(game());
