@@ -185,6 +185,8 @@ buttons.forEach((button) => {
   });
 });
 
+const scoreCount = document.getElementById("score");
+scoreCount.innerHTML += score;
 
 /*
 function game() {
