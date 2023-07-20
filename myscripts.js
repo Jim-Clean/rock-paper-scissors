@@ -73,6 +73,8 @@ function playRound(playerSelection, computerSelection) {
             console.log("Computer wins!")
         }
 
+        const scoreCount = document.getElementById("score");
+        scoreCount.innerHTML = score;
     //return outcome
 
 }
@@ -185,9 +187,10 @@ buttons.forEach((button) => {
   });
 });
 
+/*
 const scoreCount = document.getElementById("score");
 scoreCount.innerHTML += score;
-
+*/
 /*
 function game() {
     for (let round = 0; round > 5; round++) {
